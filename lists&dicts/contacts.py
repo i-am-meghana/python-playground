@@ -24,3 +24,5 @@ for i, d in enumerate(contact_book):
         break
     else:
         print("not found")
+        
+    #if and else is checked for all values in the list
