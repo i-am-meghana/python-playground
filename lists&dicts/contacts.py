@@ -3,12 +3,24 @@ contact_book = []
 for i in range(n):
     contact_name = input("enter contact name")
     contact_number = input("enter number")
-    
-    contact_details = {contact_name : contact_number}
-    
     contact_tag = input("enter tag")
-    contact_details["tag"] = contact_tag
     
-    contact_book.append(contact_details)
+    contact = {"name" : contact_name,
+               "number" : contact_number,
+               "tag" : contact_tag}
+    
+    contact_book.append(contact)
+    
     
     print(contact_book)
+
+flag = False 
+delete_contact = input("enter contact name")
+for i, d in enumerate(contact_book):
+    if d["name"] == delete_contact:
+        flag = True
+        index = i
+        print(flag)
+        break
+    else:
+        print("not found")
