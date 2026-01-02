@@ -20,9 +20,14 @@ for i, d in enumerate(contact_book):
     if d["name"] == delete_contact:
         flag = True
         index = i
-        print(flag)
         break
-    else:
-        print("not found")
+else:
+    print("contact name not found. please enter valid contact")
+
+if flag == True:
+    contact_book.pop(index)
+
+print(contact_book)
         
-    #if and else is checked for all values in the list
+
+#before, we gave if and else inside for loop. when given inside for loop will check both if and else for each value in the list 
